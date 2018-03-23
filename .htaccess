@@ -1,0 +1,21 @@
+# Begin cache control #
+ExpiresActive on
+<FilesMatch "\.(png|bmp|ico|gff|js|jpg|jpeg|gif|gcf)$">
+FileETag MTime Size
+ExpiresDefault "now plus 240 minutes"
+</FilesMatch>
+
+<FilesMatch "\.(css)$">
+FileETag MTime Size
+ExpiresDefault "now plus 60 minutes"
+</FilesMatch>
+
+ExpiresDefault "now plus 15 minutes"
+ExpiresByType text/html "now plus 15 minutes"
+<FilesMatch "\.(htm|html)$">
+FileETag MTime Size
+ExpiresDefault "now plus 15 minutes"
+</FilesMatch>
+
+
+# End cache control #
